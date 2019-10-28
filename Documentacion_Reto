@@ -1,0 +1,7 @@
+Descripcion del experimento:
+
+Para el experimento, se realizará la inclusión de un nuevo componente de reportería, el cual inicialmente no se encontraba desplegado. El componente deberá autodescubrirse e informar al api Gateway (Zull Server) de su entrada en funcionamiento, adicionalmente deberá ir a recopilar los datos de configuración desde el servidor de configuración y deberá darse de "alta" mediante un heartbeat y un proceso de registro al servidor Eureka.
+
+Adicionalmente, se realizará un cambio en la configuración del servicio y éste deberá actualizarse en línea, con el fin de garantizar que es flexible a los cambios. El cambio será uno de los parámetros de log level, pero también podría extenderse hasta un cambio de Base de datos por ejemplo.
+
+Que hipotesis (Punto Critco) va a validarse: Se desea validar que la entrada, eliminación o creación de una nueva instancia de los componentes, no requiere que la aplicación se baje o vuelva a subir. Lo que se espera es que mediante el Api Gateway se enrute todas las peticiones del nuevo servicio y que adicionalmente, éste se anuncie y se ponga en marcha de forma automática. 
